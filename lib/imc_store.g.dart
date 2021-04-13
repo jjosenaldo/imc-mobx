@@ -85,6 +85,28 @@ mixin _$ImcStore on ImcStoreBase, Store {
   final _$ImcStoreBaseActionController = ActionController(name: 'ImcStoreBase');
 
   @override
+  void setHeight(double newHeight) {
+    final _$actionInfo = _$ImcStoreBaseActionController.startAction(
+        name: 'ImcStoreBase.setHeight');
+    try {
+      return super.setHeight(newHeight);
+    } finally {
+      _$ImcStoreBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void setWeight(double newWeight) {
+    final _$actionInfo = _$ImcStoreBaseActionController.startAction(
+        name: 'ImcStoreBase.setWeight');
+    try {
+      return super.setWeight(newWeight);
+    } finally {
+      _$ImcStoreBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   void reset() {
     final _$actionInfo =
         _$ImcStoreBaseActionController.startAction(name: 'ImcStoreBase.reset');

@@ -85,7 +85,7 @@ class ImcPage extends StatelessWidget {
                   keyboardType: TextInputType.number,
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   onChanged: (String weight) =>
-                      imcStore.weight = double.tryParse(weight),
+                      imcStore.setWeight(double.tryParse(weight)),
                   maxLength: 3,
                 ),
                 _verticalPadding(),
@@ -97,7 +97,7 @@ class ImcPage extends StatelessWidget {
                   keyboardType: TextInputType.number,
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   onChanged: (String height) =>
-                      imcStore.height = double.tryParse(height),
+                      imcStore.setHeight(double.tryParse(height)),
                   maxLength: 3,
                 ),
                 _verticalPadding(),

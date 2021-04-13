@@ -51,21 +51,21 @@ abstract class ImcStoreBase with Store {
       return 'obesidade mórbida';
   }
 
-  @computed
-  set height(double height) {
-    _height = height;
+  @action
+  void setHeight(double newHeight) {
+    _height = newHeight;
     interpretationVisible = false;
   }
 
-  @computed
-  set weight(double weight) {
-    _weight = weight;
+  @action
+  void setWeight(double newWeight) {
+    _weight = newWeight;
     interpretationVisible = false;
   }
 
   @action
   void reset() {
-    height = weight = null;
+    _height = _weight = null;
     interpretationVisible = false;
   }
 }
